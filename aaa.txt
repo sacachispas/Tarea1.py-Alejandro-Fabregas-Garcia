@@ -1,1 +1,46 @@
+#tarea1.py.
+#Alejandro Fabregas Garcia 
+#Ing de sistemas y computacion
+#Codigo:8977914
 
+#Ejercicio 1
+print("Ejercicio 1")
+def verificarDiagonales(matriz):
+    n = len(matriz)
+    for i in range(n):
+        if matriz[i][i] != matriz[i][n-i-1]:
+            return False
+    return True
+
+matriz= [
+[11, 23, 76, 34, 11],
+[14, 30, 92, 30, 101],
+[12, 45, 58, 92, 22],
+[74, 56, 49, 56, 100],
+[99, 5, 28, 47, 99]]
+print (verificarDiagonales(matriz))
+
+#Ejercicio 2
+print("Ejercicio 2")
+
+def esCapicua(lista):
+    return lista == lista[::-1]
+
+lista =[42, 12, 90, 90, 12, 42]
+print(esCapicua(lista)) 
+
+#Ejercicio3a
+print("Ejercicio 3a")
+def diferenciaListas(listaA,listaB):
+    for numerosB in listaB:
+       if numerosB in listaA:
+            listaA.remove(numerosB)
+    return listaA
+
+listaA = [40, 10, 22, 12, 33, 33, 33]
+listaB = [41, 22, 31, 15, 13, 12, 33, 19]
+
+print(diferenciaListas(listaA,listaB))
+
+#Ejercicio3b
+print("Ejercicio 3b")
